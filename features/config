@@ -1,0 +1,26 @@
+
+# feautre definitions
+# format:
+#       feature name, feature value type, feature extracter class, optional
+#       extracter input
+
+first_person_pronouns       NUMERIC     TokenFeatureExtracter       /u/cs401/Wordlists/First-person
+second_person_pronouns      NUMERIC     TokenFeatureExtracter       /u/cs401/Wordlists/Second-person
+third_person_pronouns       NUMERIC     TokenFeatureExtracter       /u/cs401/Wordlists/Third-person
+coordinating_conjunctions   NUMERIC     TagFeatureExtracter         features/res/coord_conj
+past_tense_verbs            NUMERIC     TagFeatureExtracter         features/res/past_tense
+future_tense_verbs          NUMERIC     FutureTenseExtracter
+commas                      NUMERIC     TagFeatureExtracter         features/res/comma
+colons_semicolons           NUMERIC     TokenFeatureExtracter       features/res/colon_semicolon
+dashes                      NUMERIC     TokenFeatureExtracter       features/res/dash
+parentheses                 NUMERIC     TokenFeatureExtracter       features/res/paren
+ellipses                    NUMERIC     EllipsisExtracter
+common_nouns                NUMERIC     TagFeatureExtracter         features/res/common_noun
+proper_nouns                NUMERIC     TagFeatureExtracter         features/res/proper_noun
+adverbs                     NUMERIC     TagFeatureExtracter         features/res/adverb
+wh_words                    NUMERIC     TagFeatureExtracter         features/res/wh_words
+slang_acronyms              NUMERIC     TokenFeatureExtracter       /u/cs401/Wordlists/Slang
+upper_case_words            NUMERIC     UpperCaseWordExtracter
+average_sentence_length     NUMERIC     SentLengthExtracter
+average_token_length        NUMERIC     TokenLengthExtracter
+sentence_count              NUMERIC     SentCountExtracter

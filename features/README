@@ -1,0 +1,53 @@
+
+This directory contains all the resources required to define the features used in buildarff.py.
+
+config:
+    The main configuration file for defining features
+    This file lists all features names, python classes used to extract the features, as well as the
+    feature value types.
+
+*.py:
+    Feature extracter classes
+
+FeatureExtracter.py:
+    The abstract base class of all extracters
+    Declares an 'extract' interface function that takes in sentences from a tweet and returns a
+    feature value.
+
+TokenFeatureExtracter.py:
+    Number of tokens matching the given targets
+    Takes in a resource file containing the token matching targets
+
+TagFeatureExtracter.py:
+    Number of tag matching the given targets
+    Takes in a resource file containing the tag matching targets
+
+EllipsisExtracter.py:
+    Number of ellipsis in a tweet
+
+FutureTenseExtracter.py:
+    Number of future-tense words
+
+SentCountExtracter.py:
+    Number of sentences
+
+SentLengthExtracter.py:
+    Average sentence length
+
+TokenLengthExtracter.py:
+    Average token length
+
+UpperCaseWordExtracter.py:
+    Number of upper case words with length >= 2
+
+/res:
+    Lists of token/tag matching targets
+
+
+ADDING/REMOVING FEATURES:
+    Our feature definition framework is modular in that adding and removing features is simple.
+    To add a feature, simply add a line in 'config' file with feature name, value type, and the 
+    extracter name. One can either reuse an existing extracter or implement one's own by extending
+    from the abstract base class FeatureExtracter.py. To remove a feature, remove the line
+    correpsonding to that feature from 'config'.
+
